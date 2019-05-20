@@ -37,7 +37,7 @@ client.on('message', function (message) {
             queueAdders: [],
             isPlaying: false,
             dispatcher: null,
-            voiceChannel: null,
+            voiceChannel: 577530269922230293,
             skipReq: 0,
             skippers: [],
         };
