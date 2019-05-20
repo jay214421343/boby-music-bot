@@ -37,7 +37,7 @@ client.on('message', function (message) {
             queueAdders: [],
             isPlaying: false,
             dispatcher: null,
-            voiceChannel: 577530269922230293,
+            voiceChannel: null,
             skipReq: 0,
             skippers: [],
         };
@@ -175,7 +175,7 @@ function skip_song(message) {
 
 function playMusic(id, message) {
     guilds[message.guild.id].voiceChannel = message.member.voiceChannel;
-    guilds[message.guild.id].voiceChannel.join().then(function (connection) {
+    guilds[message.guild.id].voiceChannel.join(577530269922230293).then(function (connection) {
         stream = ytdl("https://www.youtube.com/watch?v=" + id, {
             filter: 'audioonly'
         });
